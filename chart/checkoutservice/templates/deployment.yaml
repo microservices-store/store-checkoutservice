@@ -15,7 +15,7 @@ spec:
       containers:
         - name: {{ include "checkoutservice.name" . }}
           image: "{{ .Values.DockerRepo }}:{{ .Values.DockerTag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }} 
+          imagePullPolicy: Always 
           env:
             - name: PORT
               value: "5050"
